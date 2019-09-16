@@ -1,10 +1,10 @@
 <template>
-  <div class="home"></div>
+  <div class="download">download</div>
 </template>
 
 <script>
 export default {
-  name: "home",
+  name: "download",
   data() {
     return {};
   },
