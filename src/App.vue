@@ -2,10 +2,13 @@
   <div id="app">
     <!-- <baidu-map class="bm-view" center="南京">
       <bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"></bm-geolocation>
-    </baidu-map> -->
+    </baidu-map>-->
     <button @click="openEn">切英文</button>
     <button @click="openZh">切中文</button>
     <ul>
+      <router-link to="/home">
+        <li>{{$t('home')}}</li>
+      </router-link>
       <router-link to="/music">
         <li>{{$t('music')}}</li>
       </router-link>
@@ -28,13 +31,13 @@
 
     <!-- <p v-for="(operate) in navTo.operate" class="nav" :key="operate.id">
       <router-link :to="{ path: operate.path }">{{operate.name}}</router-link>
-    </p>
-    <router-view />-->
+    </p>-->
+
+    <router-view />
   </div>
 </template>
 
 <script>
-import i18n from "./locales";
 export default {
   name: "app",
   data() {
@@ -50,6 +53,11 @@ export default {
       // }
     };
   },
+  watch: {
+    $route(to, from) {
+      document.documentElement.scrollTop = 0;
+    }
+  },
   computed: {},
   methods: {
     openEn() {
@@ -60,29 +68,15 @@ export default {
       this.lang = "zh-CN";
       this.$i18n.locale = this.lang;
     }
-  }
+  },
+  created() {}
 };
 </script>
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  height: 100%;
 }
 
 .bm-view {

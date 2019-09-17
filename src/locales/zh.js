@@ -1,4 +1,5 @@
 module.exports = {
+    home: '首页',
     music: '网易云音乐',
     findMusic: '发现音乐',
     myMusic: '我的音乐',
