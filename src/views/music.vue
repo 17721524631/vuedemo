@@ -1,6 +1,8 @@
 <template>
   <div class="music">
-      music
+    <van-button class="next" @click="end()">最后上传按钮</van-button>
+
+    <router-link to="/">返回首页</router-link>
   </div>
 </template>
 
@@ -11,6 +13,9 @@ export default {
     return {};
   },
   methods: {
+    end() {
+      console.log(this.$store.state.fileList);
+    }
   }
 };
 </script>

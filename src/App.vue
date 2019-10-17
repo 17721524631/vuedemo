@@ -3,7 +3,7 @@
     <!-- <baidu-map class="bm-view" center="南京">
       <bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"></bm-geolocation>
     </baidu-map>-->
-    <button @click="openEn">切英文</button>
+    <!-- <button @click="openEn">切英文</button>
     <button @click="openZh">切中文</button>
     <ul>
       <router-link to="/home">
@@ -27,7 +27,7 @@
       <router-link to="/download">
         <li>{{$t('download')}}</li>
       </router-link>
-    </ul>
+    </ul>-->
 
     <!-- <p v-for="(operate) in navTo.operate" class="nav" :key="operate.id">
       <router-link :to="{ path: operate.path }">{{operate.name}}</router-link>

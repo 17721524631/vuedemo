@@ -1,6 +1,6 @@
 <template>
   <div class="myMusic">
-      myMusic
+    
   </div>
 </template>
 
@@ -8,9 +8,16 @@
 export default {
   name: "myMusic",
   data() {
-    return {};
+    return {
+      
+    };
   },
   methods: {
+    
   }
 };
 </script>
+
+<style scoped>
+
+</style>

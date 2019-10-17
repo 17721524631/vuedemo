@@ -1,9 +1,11 @@
 <template>
   <div class="Home">
-    <img
-      src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1568684922&di=829b343076c946feb0dc630e2e3ff4ca&src=http://bpic.588ku.com/back_pic/03/78/05/2257c0fd3582b3d.jpg"
-      alt
-    />
+    <van-uploader v-model="fileList" multiple :after-read="afterRead" accept="*" />
+    <div>
+      <router-link to="/music">
+        <van-button class="next" @click="a()">下一步</van-button>
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -11,16 +13,30 @@
 export default {
   name: "Home",
   data() {
-    return {};
+    return {
+      fileList: []
+    };
   },
-  methods: {}
+  watch: {},
+  methods: {
+    afterRead(file) {
+      // 此时可以自行将文件上传至服务器
+      console.log(file);
+    },
+    a() {
+      console.log(this.fileList);
+      this.$store.commit("fileList", this.fileList);
+    }
+  },
+  mounted() {}
 };
 </script>
 
 <style scoped>
-.Home {
-  width: 500px;
-  height: 1200px;
-  background: blue;
+.myMusic {
+  margin-top: 10%;
+}
+.next {
+  margin-top: 10%;
 }
 </style>
