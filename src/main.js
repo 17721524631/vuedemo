@@ -28,6 +28,12 @@ require('vue-video-player/src/custom-theme.css')
 import "videojs-flash";
 Vue.use(VideoPlayer)
 
+// import VCharts from 'v-charts'
+// Vue.use(VCharts)
+
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 

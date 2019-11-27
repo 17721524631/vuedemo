@@ -24,9 +24,13 @@ export default {
         aspectRatio: "16:9", // 将播放器置于流畅模式，并在计算播放器的动态大小时使用该值。值应该代表一个比例 - 用冒号分隔的两个数字（例如"16:9"或"4:3"）
         fluid: true, // 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器。
         sources: [
+          // {
+          //   type: "video/mp4", //这里的种类支持很多种：基本视频格式、直播、流媒体等，具体可以参看git网址项目
+          //   src: "http://117.159.24.13/sprhobs-2/21/1574748037.mp4?access_key_id=QYVYHCTHQMQHSQNJBQFJ&expires=1574786869&signature=BuaAHX0NgxWCxsFNESUflKdum6vBVCli38kdeMvpV8c%3D" //url地址
+          // },
           {
-            type: "rtmp/mp4", //这里的种类支持很多种：基本视频格式、直播、流媒体等，具体可以参看git网址项目
-            src: "rtmp://117.159.24.12:11935/live/19" //url地址
+            type: "video/mp4", //这里的种类支持很多种：基本视频格式、直播、流媒体等，具体可以参看git网址项目
+            src:"http://117.159.24.13/sprhobs-2/21/1574748097.mp4?access_key_id=QYVYHCTHQMQHSQNJBQFJ&expires=1574786869&signature=pyxWvR%2BnfphQBCyoTL6XLQ%2BTQ7RJd856CsakvmsUm0U%3D" //url地址
           }
         ],
         techOrder: ["flash"],

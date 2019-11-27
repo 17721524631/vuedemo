@@ -3,6 +3,8 @@
     <van-button class="next" @click="end()">最后上传按钮</van-button>
 
     <router-link to="/">返回首页</router-link>
+
+    <router-link to="/findMusic">findMusic</router-link>
   </div>
 </template>
 

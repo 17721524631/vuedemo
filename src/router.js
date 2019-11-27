@@ -11,17 +11,7 @@ export default new Router({
     {
       path: '/',
       name: '重定向',
-      redirect: '/home'
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: () => import('./views/About.vue')
+      redirect: '/music'
     },
     {
       path: '/music',
@@ -31,27 +21,41 @@ export default new Router({
     {
       path: '/findMusic',
       name: 'findMusic',
-      component: () => import('./views/findMusic.vue')
-    },
-    {
-      path: '/myMusic',
-      name: 'myMusic',
-      component: () => import('./views/myMusic.vue')
-    },
-    {
-      path: '/friend',
-      name: 'friend',
-      component: () => import('./views/friend.vue')
-    },
-    {
-      path: '/musician',
-      name: 'musician',
-      component: () => import('./views/musician.vue')
-    },
-    {
-      path: '/download',
-      name: 'download',
-      component: () => import('./views/download.vue')
-    },
+      component: () => import('./views/findMusic.vue'),
+      children: [
+        {
+          path: '/about',
+          name: 'about',
+          component: () => import('./views/About.vue')
+        },
+      ]
+    }
+
+
+    // {
+    //   path: '/findMusic',
+    //   name: 'findMusic',
+    //   component: () => import('./views/findMusic.vue')
+    // },
+    // {
+    //   path: '/myMusic',
+    //   name: 'myMusic',
+    //   component: () => import('./views/myMusic.vue')
+    // },
+    // {
+    //   path: '/friend',
+    //   name: 'friend',
+    //   component: () => import('./views/friend.vue')
+    // },
+    // {
+    //   path: '/musician',
+    //   name: 'musician',
+    //   component: () => import('./views/musician.vue')
+    // },
+    // {
+    //   path: '/download',
+    //   name: 'download',
+    //   component: () => import('./views/download.vue')
+    // },
   ]
 })
