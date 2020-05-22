@@ -56,7 +56,7 @@ export default {
   width: 1000px;
   height: 600px;
   background: url("../assets/1.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
   margin: 3%;
   position: relative;
 }
